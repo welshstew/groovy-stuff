@@ -29,12 +29,10 @@ DefaultKubernetesClient dkc = new DefaultKubernetesClient(serverUrl);
 
 println dkc.getApiVersion()
 
-PodList kubePods = dkc.inNamespace("jolokia").pods().withLabel("application","broker").list()
+PodList kubePods = dkc.inNamespace("jolokia").pods().withLabel("type","amq").list()
+def podNames = kubePods.items.collect { it.metadata.name }
 
-kubePods.items.each { pod ->
-        println pod.metadata.name
-}
-
-println dkc.inNamespace("jolokia").pods().withLabel("application","broker").list()
+println podNames
+println kubePods
 
 
