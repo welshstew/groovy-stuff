@@ -1,0 +1,9 @@
+{
+    "token": "2o-KnjNc8xeEIECF1IFs5Q3gH2XwqfyaQQVL_KDo7ng",
+    "namespace": "playground",
+    "label": "component=il-broker",
+    "api": "http://jolokia-aggregator-svc-playground.rhel-cdk.10.1.2.2.xip.io",
+    "properties": "QueueSize,ConsumerCount",
+    "queue": "queue.one",
+    "command": "stats"
+}
